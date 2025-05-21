@@ -1,11 +1,1 @@
-{
-  "apps": {
-    "E06GYQHMH8V": {
-      "app_id": "A08NAEUNLPQ",
-      "enterprise_id": "E06GYQHMH8V",
-      "team_domain": "slack-demo-7265",
-      "team_id": "E06GYQHMH8V"
-    }
-  },
-  "default": "slack-demo-7265"
-}
+{}
