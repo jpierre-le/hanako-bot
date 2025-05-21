@@ -1,20 +1,18 @@
 import { Manifest } from "deno-slack-sdk/mod.ts";
-import { ReplyToMessageWorkflow } from "./workflows/reply_to_message.ts";
-import { ReplyToMessageWorkflow2 } from "./workflows/reply_to_message2.ts";
+import { ReplyToMessageWorkflow5 } from "./workflows/reply_to_message5.ts";
+import { ReplyToMessageWorkflow6 } from "./workflows/reply_to_message6.ts";
 
 export default Manifest({
   name: "Hanako Sato",
-  description: "TDX Tokyo Demo",
-  icon: "assets/icon.jpg",
+  displayName: "Hanako Sato",
+  description: "Demo",
+  icon: "assets/hanako-icon.jpg",
   workflows: [
-       ReplyToMessageWorkflow,
-       ReplyToMessageWorkflow2,
+       ReplyToMessageWorkflow5,
+       ReplyToMessageWorkflow6,
   ],
   outgoingDomains: [],
   botScopes: [
-    "commands",
-    "channels:join",
-    "channels:manage",
     "channels:history",
     "groups:write",
     "im:write",

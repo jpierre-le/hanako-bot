@@ -1,9 +1,9 @@
 import { DefineWorkflow, Schema } from "deno-slack-sdk/mod.ts";
 
-export const ReplyToMessageWorkflow2 = DefineWorkflow(
+export const ReplyToMessageWorkflow5 = DefineWorkflow(
   {
-    callback_id: "reply_to_message2",
-    title: "Reply to the message posted2",
+    callback_id: "reply_to_message5",
+    title: "Reply to the message posted5",
     description: "Reply with today's message",
     input_parameters: {
       properties: {
@@ -25,14 +25,14 @@ export const ReplyToMessageWorkflow2 = DefineWorkflow(
   },
 );
 
-ReplyToMessageWorkflow2.addStep(
+ReplyToMessageWorkflow5.addStep(
   Schema.slack.functions.ReplyInThread,
   {
     message_context: {
-      channel_id: ReplyToMessageWorkflow2.inputs.channel_id,
-      message_ts: ReplyToMessageWorkflow2.inputs.message_ts,
+      channel_id: ReplyToMessageWorkflow5.inputs.channel_id,
+      message_ts: ReplyToMessageWorkflow5.inputs.message_ts,
     },
     message:
-      `<@${ReplyToMessageWorkflow2.inputs.user_id}> 承認します :thumbsup: `,
+      `<@${ReplyToMessageWorkflow5.inputs.user_id}> IT Help Desk Agent に聞いてみてください :wave:`,
   },
 );

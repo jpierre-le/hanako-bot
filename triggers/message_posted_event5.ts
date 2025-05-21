@@ -4,9 +4,9 @@ import {
   TriggerEventTypes,
   TriggerTypes,
 } from "deno-slack-api/mod.ts";
-import { ReplyToMessageWorkflow2 } from "../workflows/reply_to_message2.ts";
+import { ReplyToMessageWorkflow5 } from "../workflows/reply_to_message5.ts";
 
-const trigger: Trigger<typeof ReplyToMessageWorkflow2.definition> = {
+const trigger: Trigger<typeof ReplyToMessageWorkflow5.definition> = {
   type: TriggerTypes.Event,
   event: {
     event_type: TriggerEventTypes.MessagePosted,
@@ -22,15 +22,15 @@ const trigger: Trigger<typeof ReplyToMessageWorkflow2.definition> = {
             ],
           },
           {
-            statement: "{{data.text}} CONTAINS '新しい端末の承認をいただけますか？'",
+            statement: "{{data.text}} CONTAINS '社用携帯の申請はどのように進めればよろしいでしょうか？'",
           },
         ],
       },
     version: 1,
     },
   },
-  name: "Reply to the posted message2",
-  workflow: `#/workflows/${ReplyToMessageWorkflow2.definition.callback_id}`,
+  name: "Reply to the posted message5",
+  workflow: `#/workflows/${ReplyToMessageWorkflow5.definition.callback_id}`,
   inputs: {
     message_ts: {
       value: TriggerContextData.Event.MessagePosted.message_ts,
